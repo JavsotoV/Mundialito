@@ -1,0 +1,71 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.utiles.ctrfuncion"
+        ],
+        "designer|userClassName": "gmo.gmu.utiles.ctrfuncion"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string"
+    },
+    "name": "MyController",
+    "designerId": "41965f8b-da2a-4b5b-850f-16c3397885f9",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "as_params",
+                    "as_url",
+                    "cb_function"
+                ],
+                "fn": "fn_AjaxRequest",
+                "implHandler": [
+                    "               var respuesta='';",
+                    "",
+                    "               Ext.Ajax.request({",
+                    "                        method:'POST',",
+                    "                        url:as_url,",
+                    "                        params:as_params,",
+                    "",
+                    "                        success:function(result,request){",
+                    "",
+                    "                            respuesta=Ext.JSON.decode(result.responseText);",
+                    "",
+                    "                            if (respuesta.success){",
+                    "                                cb_function(true);",
+                    "                            }else{",
+                    "                                Ext.Msg.alert('Mensaje',respuesta.msgError);",
+                    "                                cb_function(false);",
+                    "                            }",
+                    "                        },",
+                    "                        failure:function(result,request){",
+                    "                            respuesta=Ext.JSON.decode(result.responseText);",
+                    "                            Ext.Msg.alert('Mensaje Failure',respuesta.msgError);",
+                    "                            cb_function(false);",
+                    "                        }",
+                    "                    });"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "fn_AjaxRequest",
+            "designerId": "cda6aefc-66e2-4658-9374-c665134361f9"
+        }
+    ]
+}

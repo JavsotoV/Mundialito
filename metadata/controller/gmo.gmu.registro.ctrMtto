@@ -1,0 +1,164 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.registro.ctrMtto"
+        ],
+        "designer|userClassName": "gmo.gmu.registro.ctrMtto",
+        "views": [
+            "gmo.gmu.registro.winMtto"
+        ]
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "views": "typedarray"
+    },
+    "name": "MyController1",
+    "designerId": "dbf381ad-b6aa-48d2-b6f3-4cd2b9445beb",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Mtto",
+                "selector": "#wingmuregistro"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Mtto",
+            "designerId": "f9f7f552-a634-4a7c-b6da-16d47face4bd"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Main",
+                "selector": "#vpngmumain"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Main",
+            "designerId": "9ff8ce12-8d4d-4fef-9567-c1199e72bb91"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuregistro #btnGuardar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnGuardarClick",
+                "implHandler": [
+                    "        var me = this,",
+                    "            win = me.getMtto(),",
+                    "            vp = me.getMain(),",
+                    "            ln_accion = win.down('#accion'),",
+                    "            frm = win.down('#frmgmuregistro');",
+                    "",
+                    "            if (frm.isValid()===false){",
+                    "",
+                    "                Ext.MessageBox.alert('Mensaje','Datos de formulario de registro incompleto');",
+                    "",
+                    "                return;",
+                    "            }",
+                    "",
+                    "",
+                    "  frm.submit({",
+                    "    success: function(form, action){",
+                    "",
+                    "        var objJson =Ext.JSON.decode(action.response.responseText);",
+                    "        if (objJson.success){",
+                    "            Ext.MessageBox.alert('Mensaje',objJson.msg);",
+                    "            vp.down('#grdgmuregistro').getStore().reload();",
+                    "            vp.down('#grdgmuregistro').getSelectionModel().deselectAll();",
+                    "            win.close();",
+                    "        }",
+                    "    },",
+                    "    failure: function(form,action){",
+                    "",
+                    "        var objJson =Ext.JSON.decode(action.response.responseText);",
+                    "",
+                    "        Ext.MessageBox.alert('Mensaje',objJson.msgError);",
+                    "",
+                    "    },",
+                    "    params:{",
+                    "        operacion:1,",
+                    "        accion:ln_accion.getValue()",
+                    "    }",
+                    "",
+                    "});",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnGuardarClick",
+            "designerId": "5174811d-ae42-43df-af90-49911b8151f2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuregistro #btnCerrar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnCerrarClick",
+                "implHandler": [
+                    "            button.up('window').close();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnCerrarClick",
+            "designerId": "feb3f982-5a1f-45bb-83d4-225194dea27d"
+        }
+    ]
+}

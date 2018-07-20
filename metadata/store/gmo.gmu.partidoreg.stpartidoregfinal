@@ -1,0 +1,82 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.partidoreg.stpartidoregfinal"
+        ],
+        "designer|userClassName": "gmo.gmu.partidoreg.stpartidoregfinal",
+        "groupField": "ls_gru_denominacion",
+        "model": "gmo.gmu.partidoreg.mdpartidoreg",
+        "storeId": "gmo.gmu.partidoreg.stpartidoregfinal"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "gmo.gmu.partidoreg.stpartidoreg2",
+    "designerId": "838eaf94-174f-48b7-b03e-58342c2c3328",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/library/Mundialito/process/lst_gmu_partidoreg.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "6266a1e5-5ce8-4490-b0c3-4a890595e151",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "4a6412f8-bf48-434c-807c-0025c4843f94"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getGroupString",
+                "implHandler": [
+                    "        return ':' + instance.get ( 'ls_gru_denominacion' );"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getGroupString",
+            "designerId": "864bfda9-95b0-423e-8fef-f99d3e4a5be3"
+        }
+    ]
+}

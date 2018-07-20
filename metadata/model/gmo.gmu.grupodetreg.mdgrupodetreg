@@ -1,0 +1,258 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.grupodetreg.mdgrupodetreg"
+        ],
+        "designer|userClassName": "gmo.gmu.grupodetreg.mdgrupodetreg",
+        "idProperty": "ln_rgd_codigo"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "idProperty": "string"
+    },
+    "name": "MyModel",
+    "designerId": "d7198be6-7f5d-4d29-a5e0-2b2e4df6505e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_rgd_codigo",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField8",
+            "designerId": "49eaf953-3f55-4f9f-b08f-7255b6978b4f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_reg_codigo",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField9",
+            "designerId": "14f085be-ccf8-4851-8124-c869ab04cd24"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_gru_codigo",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField10",
+            "designerId": "3d368ed6-5b4d-4c40-99f7-c536bd901595"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ls_gru_denominacion",
+                "type": "string"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField11",
+            "designerId": "5443476a-3370-45dc-a0d4-68ab9cbcb8fb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ls_equ_denominacion",
+                "type": "string"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField12",
+            "designerId": "465c2017-9c31-481c-b49d-3b1d68b1ca05"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_eqd_puntos",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField13",
+            "designerId": "fd5d155c-91a0-4483-8962-f702522d9d72"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_eqd_ganado",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField14",
+            "designerId": "68cb5f76-1219-43e7-951b-1f7f480a613e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_eqd_empatado",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField15",
+            "designerId": "0b1d631a-5f63-4fa5-8273-d94a373a9227"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_eqd_perdido",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField16",
+            "designerId": "e588761c-e519-4492-9b51-43d9a25ca4e7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_eqd_golfavor",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField17",
+            "designerId": "f83078f0-aa09-45df-b7ca-c41511e254e9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_eqd_golcontra",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField18",
+            "designerId": "d6942ce4-27e5-4abc-9d1a-9404074e88f1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_eqd_puesto",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField19",
+            "designerId": "43fddde8-2f13-4333-959c-15079d7f2e4e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_eqd_diferencia",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField20",
+            "designerId": "60e00c44-1f30-44cf-84e5-8a29897b1d86"
+        }
+    ]
+}

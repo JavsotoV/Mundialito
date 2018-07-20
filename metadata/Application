@@ -1,0 +1,75 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "appFolder": "app/mundialito",
+        "appProperty": "mundialito",
+        "controllers": [
+            "gmo.gmu.registro.ctrMain",
+            "gmo.gmu.partidoreg.crtMtto",
+            "gmo.gmu.autenticacion.ctrMtto",
+            "gmo.gmu.persona.ctrMtto",
+            "gmo.gmu.registro.ctrMtto",
+            "gmo.gmu.adicionalreg.ctrMtto",
+            "gmo.gmu.excelenciareg.ctrMtto",
+            "gmo.gmu.jugador.ctrlistado",
+            "gmo.gmu.utiles.ctrfuncion",
+            "gmo.gmu.security.ctrMtto"
+        ],
+        "models": [
+            "gmo.gmu.registro.mdregistro",
+            "gmo.gmu.grupodetreg.mdgrupodetreg",
+            "gmo.gmu.partidoreg.mdpartidoreg",
+            "gmo.gmu.partidoreg.mdpartidoreggrupo",
+            "gmo.gmu.adicionalreg.mdadicionalreg",
+            "gmo.gmu.excelenciareg.mdexcelenciareg",
+            "gmo.gmu.jugador.mdjugador",
+            "gmo.gmu.persona.mdpersona",
+            "gmo.gmu.resultado.mdresultado",
+            "gmo.gmu.resultado.mdresumen"
+        ],
+        "name": "mundialito",
+        "stores": [
+            "gmo.gmu.registro.stregistro",
+            "gmo.gmu.grupodetreg.stgrupodetreg",
+            "gmo.gmu.partidoreg.stpartidoreg",
+            "gmo.gmu.partidoreg.stpartidoregcuarto",
+            "gmo.gmu.partidoreg.stpartidoregfinal",
+            "gmo.gmu.partidoreg.stpartidoreggrupo",
+            "gmo.gmu.utiles.stpais",
+            "gmo.gmu.adicionalreg.stadicionalreg",
+            "gmo.gmu.excelenciareg.stexcelenciareg",
+            "gmo.gmu.adicionalreg.stadicionalreggrupo",
+            "gmo.gmu.excelenciareg.stexcelenciareggrupo",
+            "gmo.gmu.jugador.stjugador",
+            "gmo.gmu.persona.stpersona",
+            "gmo.gmu.resultado.stresultado",
+            "gmo.gmu.resultado.rsresumen"
+        ],
+        "title": "GMO - Mundialito",
+        "views": [
+            "gmo.gmu.registro.vpmain",
+            "gmo.gmu.persona.winMtto",
+            "gmo.gmu.autenticacion.winMtto",
+            "gmo.gmu.registro.winMtto",
+            "gmo.gmu.jugador.winListado",
+            "gmo.gmu.security.winchangepwd"
+        ]
+    },
+    "configAlternates": {
+        "appFolder": "string",
+        "appProperty": "string",
+        "controllers": "typedarray",
+        "models": "typedarray",
+        "name": "string",
+        "stores": "typedarray",
+        "views": "typedarray",
+        "title": "string"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

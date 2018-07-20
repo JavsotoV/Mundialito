@@ -1,0 +1,241 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.autenticacion.ctrMtto"
+        ],
+        "designer|userClassName": "gmo.gmu.autenticacion.ctrMtto",
+        "views": [
+            "gmo.gmu.autenticacion.winMtto"
+        ]
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "views": "typedarray"
+    },
+    "name": "MyController1",
+    "designerId": "64808965-b785-4316-8da0-4a048c70d664",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuautenticacion #btnSesion",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnSesionClick",
+                "implHandler": [
+                    "            var me = this,",
+                    "                win= me.getMain(),",
+                    "                frm = win.down('#frmgmuautenticacion');",
+                    "",
+                    "            if (frm.isValid()===false){",
+                    "",
+                    "                Ext.MessageBox.alert('Mensaje','Debe especificar cuenta y password de acceso');",
+                    "",
+                    "                return;",
+                    "",
+                    "            }",
+                    "",
+                    "",
+                    "        frm.submit({",
+                    "            success: function(form, action){",
+                    "",
+                    "                var objJson =Ext.JSON.decode(action.response.responseText);",
+                    "",
+                    "                if (objJson.success){",
+                    "",
+                    "                if(objJson.data[0].ln_retorno!==1){",
+                    "",
+                    "                    var ls_mensaje = objJson.data[0].ls_mensaje;",
+                    "",
+                    "                    Ext.MessageBox.alert('Mensaje',ls_mensaje);",
+                    "                }",
+                    "                    else",
+                    "                {",
+                    "",
+                    "                    var vpn=Ext.create('mundialito.view.gmo.gmu.registro.vpmain');",
+                    "",
+                    "                    vpn.down('#ln_per_codigo').setValue(objJson.data[0].ln_per_codigo);",
+                    "",
+                    "                    vpn.down('#ls_per_nombre').setValue(objJson.data[0].ls_per_nombre);",
+                    "                    ",
+                    "                    //,{renderTo: Ext.getBody()}",
+                    "",
+                    "                    win.setVisible(false);",
+                    "                    ",
+                    "                    vpn.show();",
+                    "",
+                    "                    ",
+                    "                }",
+                    "",
+                    "              }",
+                    "            },",
+                    "            failure: function(form,action){",
+                    "",
+                    "                    var objJson =Ext.JSON.decode(action.response.responseText);",
+                    "",
+                    "                        Ext.MessageBox.alert('Mensaje',objJson.msgError);",
+                    "",
+                    "            },",
+                    "                params:{",
+                    "                    'operacion':1",
+                    "                }",
+                    "",
+                    "            });",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnSesionClick",
+            "designerId": "21957a40-9e5d-4d22-a19c-e22723787bc0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuautenticacion #btnRegistrar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnRegistrarClick",
+                "implHandler": [
+                    "            var win =Ext.create('mundialito.view.gmo.gmu.persona.winMtto');",
+                    "",
+                    "                win.down('#accion').setValue(1);",
+                    "",
+                    "                win.down('#ln_per_codigo').setValue(0);",
+                    "",
+                    "                win.down('#win_parent').setValue(0);",
+                    "",
+                    "                win.show();",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnRegistrarClick",
+            "designerId": "c3d683a1-bc8a-412c-a912-c7fb0e7b3fb7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuautenticacion #btnCerrar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnCerrarClick",
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "name": "string"
+            },
+            "name": "onBtnCerrarClick",
+            "designerId": "b804fa4d-46bc-47e3-b11d-52c371b5ecbe"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Main",
+                "selector": "#wingmuautenticacion"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Main",
+            "designerId": "bb0e4d2f-d45a-4f16-9fde-f05d3cd5c351"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuautenticacion #ls_cta_password",
+                "designer|params": [
+                    "field",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.form.field.Text",
+                "fn": "onLs_cta_passwordSpecialkey",
+                "implHandler": [
+                    "        var me = this,",
+                    "            win = me.getMain(),",
+                    "            btn_sesion = win.down('#btnSesion');",
+                    "",
+                    "            if(e.getKey()==e.ENTER){me.onBtnSesionClick(me,me.btn_sesion);}"
+                ],
+                "name": "specialkey"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onLs_cta_passwordSpecialkey",
+            "designerId": "656b78a0-22e4-40f4-a5af-4c6c8a371cf6"
+        }
+    ]
+}

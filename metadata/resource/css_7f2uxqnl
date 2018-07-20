@@ -1,0 +1,18 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_7f2uxqnl",
+        "url": "http://localhost/css/application.css"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "url": "uri"
+    },
+    "name": "css",
+    "designerId": "b3feebd8-29a0-495d-aec3-94393c7d5a33"
+}

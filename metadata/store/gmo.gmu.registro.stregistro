@@ -1,0 +1,60 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.registro.stregistro"
+        ],
+        "designer|userClassName": "gmo.gmu.registro.stregistro",
+        "model": "gmo.gmu.registro.mdregistro",
+        "storeId": "gmo.gmu.registro.stregistro"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "3f0d2e0a-9f07-464f-8e72-67c3101aa84f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/library/Mundialito/process/lst_gmu_registro.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "bc31ecaf-e5a1-4742-a343-76a39d8f73b7",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "99a77f80-8ace-409a-8eb7-4e00121f65c3"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.jugador.stjugador"
+        ],
+        "designer|userClassName": "gmo.gmu.jugador.stjugador",
+        "model": "gmo.gmu.jugador.mdjugador",
+        "storeId": "gmo.gmu.jugador.stjugador"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "63e9d9c1-1584-47c1-80f4-623954ac1296",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/library/Mundialito/process/lst_gmu_jugador.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy5",
+            "designerId": "3e2a4530-b01c-46b7-b4b9-e031f9a4c0bb",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader5",
+                    "designerId": "555acd3e-312e-4f92-afec-2ba99bc74fca"
+                }
+            ]
+        }
+    ]
+}

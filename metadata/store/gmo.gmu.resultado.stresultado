@@ -1,0 +1,82 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.resultado.stresultado"
+        ],
+        "designer|userClassName": "gmo.gmu.resultado.stresultado",
+        "groupField": "ls_cap_descripcion",
+        "model": "gmo.gmu.resultado.mdresultado",
+        "storeId": "gmo.gmu.resultado.stresultado"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "7c448561-2637-4c80-8dd1-0e9e7959d394",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/library/Mundialito/process/lst_gmu_registro.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy5",
+            "designerId": "e6ac7708-a6cd-4725-8690-d515d079e836",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader5",
+                    "designerId": "74581450-5f1a-4246-8a14-8547c27e0034"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getGroupString",
+                "implHandler": [
+                    "return 'CAP. :' + instance.get ( 'ls_cap_descripcion' );"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getGroupString",
+            "designerId": "7f9fd3b6-4e9a-4a62-bf50-9eae89a93213"
+        }
+    ]
+}

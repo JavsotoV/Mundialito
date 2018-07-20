@@ -1,0 +1,296 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.partidoreg.crtMtto"
+        ],
+        "designer|userClassName": "gmo.gmu.partidoreg.crtMtto",
+        "views": [
+            "gmo.gmu.partidoreg.winMtto"
+        ]
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "views": "typedarray"
+    },
+    "name": "MyController1",
+    "designerId": "ebabf2cf-d87f-4f5b-8d91-3f51c2423800",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Mtto",
+                "selector": "#winmttopartidoreg"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Mtto",
+            "designerId": "f9aa9c6a-f906-445b-b7e2-b86499f2de32"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Main",
+                "selector": "#vpngmumain"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Main",
+            "designerId": "3603e47f-ec38-4998-8c49-9e86c398547d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#winmttopartidoreg",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.window.Window",
+                "fn": "onWinmttopartidoregAfterRender",
+                "implHandler": [
+                    "     var me = this,",
+                    "         vp = me.getMtto(),",
+                    "         ln_reg_codigo=vp.down('#ln_reg_codigo').getValue(),",
+                    "         ln_gru_codigo=vp.down('#ln_gru_codigo').getValue(),",
+                    "         st_grupo = vp.down('#grdgmupartidoreg').getStore();",
+                    "         st_grupo.load({",
+                    "             params:{",
+                    "                 'operacion':2,",
+                    "                 'accion':2,",
+                    "                 'ln_reg_codigo':ln_reg_codigo,",
+                    "                 'ln_gru_codigo':ln_gru_codigo,",
+                    "                 'ls_condicion':'I'",
+                    "             }",
+                    "         });",
+                    ""
+                ],
+                "name": "afterrender"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onWinmttopartidoregAfterRender",
+            "designerId": "f3205dba-821e-4494-a118-a97fd8dad281"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#winmttopartidoreg #btnguardar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnguardarClick",
+                "implHandler": [
+                    "var me=this,",
+                    "    win = me.getMtto(),",
+                    "    vp  = me.getMain(),",
+                    "    frm = win.down('#frmgmupartidoreg'),",
+                    "    ln_nro_tab\t  = win.down('#ln_nro_tab').getValue(),",
+                    "    ln_accion\t  = win.down('#accion').getValue(),",
+                    "    ln_reg_codigo = win.down('#ln_reg_codigo').getValue(),",
+                    "    ln_gru_codigo = win.down('#ln_gru_codigo').getValue(),",
+                    "    stPartido\t  = win.down('#grdgmupartidoreg').getStore(),",
+                    "    lstPrnCodigo=[],",
+                    "    lstPrdCodigo=[],",
+                    "    lstLocal=[],",
+                    "    lstVisita=[],",
+                    "    lstGolLocal=[],",
+                    "    lstGolVisita=[];",
+                    "",
+                    "var ls_validacion='1';",
+                    "",
+                    "if (frm.isValid()===false){",
+                    "",
+                    "    Ext.MessageBox.alert('Mensaje','Datos incompletos, favor de revisar');",
+                    "",
+                    "    return;",
+                    "}",
+                    "",
+                    "",
+                    "Ext.each(stPartido.getRange(), function(record){",
+                    "    lstPrnCodigo.push(record.get('ln_prn_codigo'));",
+                    "    lstPrdCodigo.push(record.get('ln_prd_codigo'));",
+                    "    lstLocal.push(record.get('ln_equ_local'));",
+                    "    lstVisita.push(record.get('ln_equ_visitante'));",
+                    "",
+                    "    if (record.get('ln_equ_gollocal')!==''){",
+                    "    if (record.get('ln_equ_gollocal')<='-1'){",
+                    "",
+                    "        ls_validacion='0';",
+                    "",
+                    "        Ext.MessageBox.alert('Mensaje','No puede existir registro de goles con valor negativo');",
+                    "",
+                    "        return;",
+                    "",
+                    "        }",
+                    "    }",
+                    "    ",
+                    "    if (record.get('ln_equ_golvisita')!==''){",
+                    "",
+                    "    if (record.get('ln_equ_golvisita')<='-1'){",
+                    "",
+                    "        ls_validacion='0';",
+                    "",
+                    "        Ext.MessageBox.alert('Mensaje','No puede existir registro de goles con valor negativo');",
+                    "",
+                    "        return;",
+                    "",
+                    "    }",
+                    "    }",
+                    "",
+                    "    lstGolLocal.push(record.get('ln_equ_gollocal')==='' ? -1 :record.get('ln_equ_gollocal'));",
+                    "    lstGolVisita.push(record.get('ln_equ_golvisita')==='' ? -1 :record.get('ln_equ_golvisita'));",
+                    "",
+                    "",
+                    "    if (record.get('ln_gru_tipo')===2){",
+                    "        if ((record.get('ln_equ_gollocal')!=='') && (record.get('ln_equ_golvisita')!=='')){",
+                    "",
+                    "            if (record.get('ln_equ_gollocal')===record.get('ln_equ_golvisita')){",
+                    "",
+                    "                ls_validacion='0';",
+                    "",
+                    "                Ext.MessageBox.alert('Mensaje','En esta etapa no puede haber empates, tiene que definir un equipo ganador');",
+                    "",
+                    "                return;",
+                    "            }",
+                    "        }",
+                    "    }",
+                    "",
+                    "});",
+                    "",
+                    "",
+                    "if (ls_validacion==='0'){return;}",
+                    "",
+                    "var st_store;",
+                    "",
+                    "if(ln_nro_tab==='0') {st_store=vp.down('#grdgmugrupodetreg');}",
+                    "if(ln_nro_tab==='1') {st_store=vp.down('#grdgmupartidooctavo');}",
+                    "if(ln_nro_tab==='2') {st_store=vp.down('#grdgmupartidocuarto');}",
+                    "if(ln_nro_tab==='3') {st_store=vp.down('#grdgmupartidofinal');}",
+                    "",
+                    "",
+                    "frm.submit({",
+                    "    success: function(form, action){",
+                    "",
+                    "        var objJson =Ext.JSON.decode(action.response.responseText);",
+                    "        if (objJson.success){",
+                    "            Ext.MessageBox.alert('Mensaje',objJson.msg);",
+                    "            st_store.getStore().reload();",
+                    "            st_store.getSelectionModel().deselectAll();",
+                    "            win.close();",
+                    "        }",
+                    "    },",
+                    "    failure: function(form,action){",
+                    "",
+                    "        var objJson =Ext.JSON.decode(action.response.responseText);",
+                    "",
+                    "        Ext.MessageBox.alert('Mensaje',objJson.msgError);",
+                    "",
+                    "    },",
+                    "    params:{",
+                    "        'operacion':1,",
+                    "        'accion':ln_accion,",
+                    "        'ln_reg_codigo':ln_reg_codigo,",
+                    "        'lstPrnCodigo[]':lstPrnCodigo,",
+                    "        'lstPrdCodigo[]':lstPrdCodigo,",
+                    "        'lstLocal[]':lstLocal,",
+                    "        'lstVisita[]':lstVisita,",
+                    "        'lstGolLocal[]':lstGolLocal,",
+                    "        'lstGolVisita[]':lstGolVisita",
+                    "    }",
+                    "",
+                    "});",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "name": "string",
+                "implHandler": "code"
+            },
+            "name": "onBtnguardarClick",
+            "designerId": "2218d0c0-601e-4490-b36b-e9f17851d623"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#winmttopartidoreg #btncerrar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtncerrarClick",
+                "implHandler": [
+                    "    var me=this,",
+                    "",
+                    "        vp = me.getMain();",
+                    "",
+                    "        vp.down('#grdgmugrupodetreg').getSelectionModel().deselectAll();",
+                    "",
+                    "        button.up('#winmttopartidoreg').close();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtncerrarClick",
+            "designerId": "d2f1e333-3d3b-41f6-978a-456840a2cb49"
+        }
+    ]
+}

@@ -1,0 +1,440 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.persona.winMtto"
+        ],
+        "designer|userClassName": "gmo.gmu.persona.winMtto",
+        "height": 184,
+        "itemId": "winglbpersona",
+        "layout": "border",
+        "modal": true,
+        "title": "Registro de Participante",
+        "width": 570
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "12136f38-3423-4077-9ab4-02280ebaf643",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "configAlternates": {
+                "dock": "string"
+            },
+            "name": "MyToolbar3",
+            "designerId": "b88a854a-039f-496a-a23e-92ae4a1436ff",
+            "cn": [
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "Menu de opciones:"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyLabel3",
+                    "designerId": "301fe189-fb15-405c-a7dd-ee7b0dcea591"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MyFill1",
+                    "designerId": "cd471d21-7a1d-46e8-bbea-09034d9dc408"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator10",
+                    "designerId": "8db3b3a8-2575-4597-9d6a-3f0b49013798"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "btnSave",
+                        "itemId": "btnguardar",
+                        "layout|flex": null,
+                        "text": "Guardar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton9",
+                    "designerId": "a05a6ed7-1138-4422-be63-da548c891296"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator11",
+                    "designerId": "16f0bbcd-712d-433c-ba39-1d9adbc58a29"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "btnClose",
+                        "itemId": "btncerrar",
+                        "layout|flex": null,
+                        "text": "Cerrar"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "text": "string",
+                        "iconCls": "string",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton10",
+                    "designerId": "d5ed96e0-d220-4d31-ac31-c81595fc82c2"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator12",
+                    "designerId": "771df085-0a4b-4899-9228-f481be0e65af"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "itemId": "frmglbpersona",
+                "layout|region": "center",
+                "method": "POST",
+                "url": "/library/Mundialito/process/lst_glb_persona.php"
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "itemId": "string",
+                "layout|region": "string",
+                "method": "string",
+                "url": "string"
+            },
+            "name": "MyForm2",
+            "designerId": "ae09a187-93e8-4a6c-b758-348112fc4123",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "itemId": "ln_per_codigo",
+                        "name": "ln_per_codigo",
+                        "value": [
+                            "0"
+                        ],
+                        "width": 150
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "value": "object"
+                    },
+                    "name": "MyHiddenField8",
+                    "designerId": "0324dbe6-9ef2-4dea-b158-24967f131751"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "itemId": "accion",
+                        "name": "accion",
+                        "width": 150
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyHiddenField9",
+                    "designerId": "8ef9737c-3774-458c-b172-62e27d8b4d52"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "itemId": "win_parent",
+                        "name": "win_parent",
+                        "width": 150
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyHiddenField10",
+                    "designerId": "1d532b0b-160a-4b8c-aa9a-3e24822d20a9"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "emptyText": "Ingresar Apellidos y Nombres",
+                        "fieldLabel": "Nombres",
+                        "fieldStyle": "text-transform: uppercase;",
+                        "itemId": "ls_per_nombre",
+                        "layout|anchor": "100%",
+                        "name": "ls_per_nombre"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "itemId": "string",
+                        "name": "string",
+                        "allowBlank": "boolean",
+                        "emptyText": "string",
+                        "fieldStyle": "string"
+                    },
+                    "name": "MyTextField6",
+                    "designerId": "ca88df7a-05dd-4107-bd6b-dd8985717d8b"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "tpo_descripcion",
+                        "emptyText": "Seleccionar tipo de documento de identidad",
+                        "fieldLabel": "Tipo Documento",
+                        "itemId": "ln_tpo_codigo",
+                        "layout|anchor": "100%",
+                        "name": "ln_tpo_codigo",
+                        "queryMode": "local",
+                        "store": "gmo.gmu.utiles.sttipodocidentidad",
+                        "valueField": "tpo_codigo"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "displayField": "datafield",
+                        "itemId": "string",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "allowBlank": "boolean",
+                        "emptyText": "string"
+                    },
+                    "name": "MyComboBox1",
+                    "designerId": "1f349c60-564a-4839-82a1-5b2c146c7520"
+                },
+                {
+                    "type": "Ext.form.FieldContainer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "layout": "hbox"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "layout": "string"
+                    },
+                    "name": "MyFieldContainer2",
+                    "designerId": "272dac1b-4461-4108-8644-386957a2e6a0",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "emptyText": "Numero de documento de identidad",
+                                "fieldLabel": "Nro. Documento",
+                                "itemId": "ls_per_nrodocidentidad",
+                                "layout|flex": 1,
+                                "name": "ls_per_nrodocidentidad"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|anchor": "string",
+                                "itemId": "string",
+                                "layout|flex": "number",
+                                "name": "string",
+                                "allowBlank": "boolean",
+                                "emptyText": "string"
+                            },
+                            "name": "MyTextField8",
+                            "designerId": "a8d4f416-817b-40fa-b48a-191cb37e6af9"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Nro. Movil",
+                                "itemId": "ls_per_movil",
+                                "layout|flex": 1,
+                                "margin": "0 0 0 10",
+                                "name": "ls_per_movil"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|anchor": "string",
+                                "itemId": "string",
+                                "layout|flex": "number",
+                                "margin": "auto",
+                                "name": "string"
+                            },
+                            "name": "MyTextField9",
+                            "designerId": "b16e01d1-4307-468a-80a4-1cb8c3772ebd"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "pai_denominacion",
+                        "fieldLabel": "Region",
+                        "itemId": "ln_pai_codigo",
+                        "layout|anchor": "100%",
+                        "name": "ln_pai_codigo",
+                        "queryMode": "local",
+                        "store": "gmo.gmu.utiles.stpais",
+                        "valueField": "pai_codigo"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "valueField": "datafield"
+                    },
+                    "name": "MyComboBox",
+                    "designerId": "d19d2ada-0fb9-4219-9072-3e6ea95e0bf1"
+                }
+            ]
+        }
+    ]
+}

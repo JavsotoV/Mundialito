@@ -1,0 +1,81 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.utiles.stpais"
+        ],
+        "data": [
+            "[",
+            "    {",
+            "        \"pai_codigo\": 1,",
+            "        \"pai_denominacion\": \"PERU\"",
+            "    },",
+            "    {",
+            "        \"pai_codigo\": 2,",
+            "        \"pai_denominacion\": \"CHILE\"",
+            "    },",
+            "    {",
+            "        \"pai_codigo\": 3,",
+            "        \"pai_denominacion\": \"COLOMBIA\"",
+            "    },",
+            "    {",
+            "        \"pai_codigo\": 4,",
+            "        \"pai_denominacion\": \"ECUADOR\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "gmo.gmu.utiles.stpais",
+        "storeId": "gmo.gmu.utiles.stpais"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "data": "array",
+        "designer|userClassName": "string",
+        "storeId": "string"
+    },
+    "name": "gmo.gmu.utiles.sttipodocidentidad1",
+    "designerId": "6c572474-6c20-442c-bf1a-c881667bfa4f",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pai_codigo",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField37",
+            "designerId": "770333f1-f876-4af9-a464-d7b666edcdc1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pai_denominacion",
+                "type": "string"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField38",
+            "designerId": "af1996b1-1b18-434b-95ee-c068d8f7a92c"
+        }
+    ]
+}

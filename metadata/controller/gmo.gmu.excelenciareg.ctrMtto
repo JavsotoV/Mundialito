@@ -1,0 +1,222 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.excelenciareg.ctrMtto"
+        ],
+        "designer|userClassName": "gmo.gmu.excelenciareg.ctrMtto",
+        "views": [
+            "gmo.gmu.excelenciareg.winMtto"
+        ]
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "views": "typedarray"
+    },
+    "name": "MyController1",
+    "designerId": "9015cd95-58f1-41ed-9fbe-decce7632f77",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Main",
+                "selector": "#vpngmumain"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Main",
+            "designerId": "d00b234c-e2f7-4dd4-95cf-751dd54f0c86"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Mtto",
+                "selector": "#wingmuexcelenciareg"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Mtto",
+            "designerId": "9c4b2a81-10f5-4ef5-82a0-607e57304c7d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuexcelenciareg #btnGuardar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnGuardarClick",
+                "implHandler": [
+                    "        var me = this,",
+                    "            vp = me.getMain(),",
+                    "            win = me.getMtto(),",
+                    "            st_exevp = vp.down('#grdgmuexcelenciareg'),",
+                    "            st_excelencia = win.down('#grdgmuexcelenciareg').getStore(),",
+                    "            ln_accion = win.down('#accion').getValue(),",
+                    "            frm = win.down('#frmgmuexcelenciareg'),",
+                    "            lstexrcodigo=[],",
+                    "            lstjgdcodigo=[];",
+                    "",
+                    "",
+                    "            if (frm.isValid()===false){",
+                    "",
+                    "                Ext.MessageBox.alert('Mensaje','Datos de formulario incompleto');",
+                    "",
+                    "                return;",
+                    "            }",
+                    "",
+                    "            Ext.each(st_excelencia.getRange(),function(record){",
+                    "                lstexrcodigo.push(record.get('ln_exr_codigo'));",
+                    "                lstjgdcodigo.push(record.get('ln_jgd_codigo'));",
+                    "",
+                    "            });",
+                    "",
+                    "",
+                    "        frm.submit({",
+                    "            success: function(form, action){",
+                    "",
+                    "            var objJson =Ext.JSON.decode(action.response.responseText);",
+                    "            if (objJson.success){",
+                    "                Ext.MessageBox.alert('Mensaje',objJson.msg);",
+                    "                st_exevp.getStore().reload();",
+                    "                st_exevp.getSelectionModel().deselectAll();",
+                    "                win.close();",
+                    "            }",
+                    "    },",
+                    "    failure: function(form,action){",
+                    "",
+                    "        var objJson =Ext.JSON.decode(action.response.responseText);",
+                    "",
+                    "        Ext.MessageBox.alert('Mensaje',objJson.msgError);",
+                    "",
+                    "    },",
+                    "    params:{",
+                    "        'operacion':1,",
+                    "        'accion':ln_accion,",
+                    "        'lstexrcodigo[]':lstexrcodigo,",
+                    "        'lstjgdcodigo[]':lstjgdcodigo",
+                    "    }",
+                    "",
+                    "});",
+                    "",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "name": "string",
+                "implHandler": "code"
+            },
+            "name": "onBtnGuardarClick",
+            "designerId": "d2f9a9aa-db44-46a2-8a97-6521dc9b174e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuexcelenciareg #btnCerrar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnCerrarClick",
+                "implHandler": [
+                    "            button.up('window').close();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnCerrarClick",
+            "designerId": "202dca1a-8024-4702-9113-f978c2c0e2e9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuexcelenciareg",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.window.Window",
+                "fn": "onWingmuexcelenciaregAfterRender",
+                "implHandler": [
+                    "        var me = this,",
+                    "            win = me.getMtto(),",
+                    "            ln_reg_codigo = win.down('#ln_reg_codigo').getValue(),",
+                    "            ln_gru_codigo = win.down('#ln_gru_codigo').getValue(),",
+                    "            st_excelencia = win.down('#grdgmuexcelenciareg').getStore();",
+                    "",
+                    "            st_excelencia.load({",
+                    "                params:{",
+                    "                    'operacion':2,",
+                    "                    'ln_reg_codigo':ln_reg_codigo,",
+                    "                    'ln_gru_codigo':ln_gru_codigo",
+                    "                }",
+                    "            });",
+                    ""
+                ],
+                "name": "afterrender"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onWingmuexcelenciaregAfterRender",
+            "designerId": "84d97fed-d5a1-458c-9fb4-ef568cf2cc8e"
+        }
+    ]
+}

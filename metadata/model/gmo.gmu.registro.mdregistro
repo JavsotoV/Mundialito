@@ -1,0 +1,219 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.registro.mdregistro"
+        ],
+        "designer|userClassName": "gmo.gmu.registro.mdregistro",
+        "idProperty": "ln_reg_codigo"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "idProperty": "string"
+    },
+    "name": "MyModel",
+    "designerId": "b21f51bc-4e22-421c-8646-72c9019f4a67",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_reg_codigo",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField",
+            "designerId": "0858dcd4-564b-4802-9eee-b927a411cc86"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_reg_numero",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField1",
+            "designerId": "739426b5-682e-438b-93c6-6163e8a33f1a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ld_reg_fecha",
+                "type": "date"
+            },
+            "configAlternates": {
+                "dateFormat": "string",
+                "dateReadFormat": "string",
+                "dateWriteFormat": "string",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField2",
+            "designerId": "0e8423e9-88fd-44d6-bc0e-bdae16b3275a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ls_per_nombre",
+                "type": "string"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField3",
+            "designerId": "92d5040b-2318-4a28-b69e-0c9fc51a51dc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ls_per_nrodocidentidad",
+                "type": "string"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField4",
+            "designerId": "2270e536-1f59-436e-953c-0d8d4389b8df"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ls_trn_denominacion",
+                "type": "string"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField5",
+            "designerId": "2c1a7c66-d3c7-4698-8c30-82a98729844e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ld_trn_fechai",
+                "type": "date"
+            },
+            "configAlternates": {
+                "dateFormat": "string",
+                "dateReadFormat": "string",
+                "dateWriteFormat": "string",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField6",
+            "designerId": "27be40dd-cb7e-4b10-b4d0-c303d3b90f4e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ld_trn_fechat",
+                "type": "date"
+            },
+            "configAlternates": {
+                "dateFormat": "string",
+                "dateReadFormat": "string",
+                "dateWriteFormat": "string",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField7",
+            "designerId": "45a2b0ab-ba11-498c-a7e8-799660ab4e47"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ln_reg_estado",
+                "type": "int"
+            },
+            "configAlternates": {
+                "dateFormat": "string",
+                "dateReadFormat": "string",
+                "dateWriteFormat": "string",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField61",
+            "designerId": "ee3e3577-44f4-47b5-a1e5-4a3db4189b9e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ls_reg_estado",
+                "type": "string"
+            },
+            "configAlternates": {
+                "dateFormat": "string",
+                "dateReadFormat": "string",
+                "dateWriteFormat": "string",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField62",
+            "designerId": "8dc11aaf-10e4-45e7-a3b9-7056642d5f06"
+        }
+    ]
+}

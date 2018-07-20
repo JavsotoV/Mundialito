@@ -1,0 +1,1245 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.registro.ctrMain"
+        ],
+        "designer|userClassName": "gmo.gmu.registro.ctrMain"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string"
+    },
+    "name": "MyController",
+    "designerId": "f2548467-a3ea-4624-a4db-6b51ad0153d9",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Main",
+                "selector": "#vpngmumain"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Main",
+            "designerId": "f97254f7-bc5d-4477-9fcb-93bbb8db1e6d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnrecuperar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnrecuperarClick",
+                "implHandler": [
+                    "        var me = this,",
+                    "",
+                    "            vp = me.getMain(),",
+                    "",
+                    "            ln_per_codigo=vp.down('#ln_per_codigo').getValue(),",
+                    "",
+                    "            st_registro = vp.down('#grdgmuregistro').getStore();",
+                    "",
+                    "            st_registro.load({",
+                    "                params:{",
+                    "                    'operacion':2,",
+                    "                    'ln_per_codigo':ln_per_codigo",
+                    "                }",
+                    "            });"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnrecuperarClick",
+            "designerId": "bfde9749-244c-4ef9-812b-a39e8fafd0ba"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnretrievegrupo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnretrievegrupoClick",
+                "implHandler": [
+                    "            var me = this,",
+                    "                vp = me.getMain(),",
+                    "                grd = vp.down('#grdgmuregistro'),",
+                    "                sm = grd.getSelectionModel(),",
+                    "                st_grupodet = vp.down('#grdgmugrupodetreg').getStore();",
+                    "",
+                    "                if (sm.hasSelection()===false){",
+                    "                    return;",
+                    "                }",
+                    "",
+                    "                var rec = sm.getSelection()[0];",
+                    "",
+                    "                st_grupodet.load({",
+                    "                    params:{",
+                    "                        'operacion':2,",
+                    "                        'ln_reg_codigo':rec.data.ln_reg_codigo",
+                    "                    }",
+                    "                });               ",
+                    "",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnretrievegrupoClick",
+            "designerId": "47e38a73-629a-40e7-ab3a-922bf184cbcd"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #grdgmuregistro",
+                "designer|params": [
+                    "model",
+                    "selected",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onGrdgmuregistroSelectionChange",
+                "implHandler": [
+                    "        var me = this,",
+                    "            vp = me.getMain(),",
+                    "            btn_retrievegrupo =vp.down('#btnretrievegrupo'),",
+                    "            btn_octavo = vp.down('#btnretrieveoctavo'),",
+                    "            btn_cuarto = vp.down('#btnretrievecuarto'),",
+                    "            btn_final = vp.down('#btnretrievefinal'),",
+                    "            btn_adici = vp.down('#btnretrieveadicionalreg'),",
+                    "            btn_exce  = vp.down('#btnretrieveexcelenciareg');",
+                    "            btn_rst\t  = vp.down('#btnRetrieveResultado');",
+                    "",
+                    "",
+                    "            me.onBtnretrievegrupoClick(me,me.btn_retrievegrupo);",
+                    "            me.onBtnretrieveoctavoClick(me,me.btn_octavo);",
+                    "            me.onBtnretrievecuartoClick(me,me.btn_cuarto);",
+                    "            me.onBtnretrievefinalClick(me,me.btn_final);",
+                    "            me.onBtnretrieveadicionalregClick(me,me.btn_adici);",
+                    "            me.onBtnretrieveexcelenciaregClick(me,me.btn_exce);",
+                    "            me.onBtnRetrieveResultadoClick(me,me.btn_rst);",
+                    "",
+                    "        ",
+                    "",
+                    ""
+                ],
+                "name": "selectionchange"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onGrdgmuregistroSelectionChange",
+            "designerId": "b9586215-95d8-41ab-adb1-7996445959b3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnretrieveoctavo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnretrieveoctavoClick",
+                "implHandler": [
+                    "           var me = this,",
+                    "                        vp = me.getMain(),",
+                    "                        grd = vp.down('#grdgmuregistro'),",
+                    "                        sm = grd.getSelectionModel(),",
+                    "                        st_grupodet = vp.down('#grdgmupartidooctavo').getStore();",
+                    "",
+                    "                        if (sm.hasSelection()===false){",
+                    "                            return;",
+                    "                        }",
+                    "",
+                    "                        var rec = sm.getSelection()[0];",
+                    "",
+                    "                        st_grupodet.load({",
+                    "                            params:{",
+                    "                                'operacion':2,",
+                    "                                'ln_reg_codigo':rec.data.ln_reg_codigo,",
+                    "                                'ln_gru_codigo':9,",
+                    "                                'ls_condicion':'T'",
+                    "                            }",
+                    "                        });",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnretrieveoctavoClick",
+            "designerId": "b9fd120a-73c5-4095-9f83-95369b551243"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain  #btnretrievecuarto",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnretrievecuartoClick",
+                "implHandler": [
+                    "   var me = this,",
+                    "                        vp = me.getMain(),",
+                    "                        grd = vp.down('#grdgmuregistro'),",
+                    "                        sm = grd.getSelectionModel(),",
+                    "                        st_grupodet = vp.down('#grdgmupartidocuarto').getStore();",
+                    "",
+                    "                        if (sm.hasSelection()===false){",
+                    "                            return;",
+                    "                        }",
+                    "",
+                    "                        var rec = sm.getSelection()[0];",
+                    "",
+                    "                        st_grupodet.load({",
+                    "                            params:{",
+                    "                                'operacion':2,",
+                    "                                'ln_reg_codigo':rec.data.ln_reg_codigo,",
+                    "                                'ln_gru_codigo':10,",
+                    "                                'ls_condicion':'T'",
+                    "                            }",
+                    "                        });",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnretrievecuartoClick",
+            "designerId": "38367e89-c782-4b39-b08c-34e357b52e42"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain  #btnretrievefinal",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnretrievefinalClick",
+                "implHandler": [
+                    "   var me = this,",
+                    "                        vp = me.getMain(),",
+                    "                        grd = vp.down('#grdgmuregistro'),",
+                    "                        sm = grd.getSelectionModel(),",
+                    "                        st_grupodet = vp.down('#grdgmupartidofinal').getStore();",
+                    "",
+                    "                        if (sm.hasSelection()===false){",
+                    "                            return;",
+                    "                        }",
+                    "",
+                    "                        var rec = sm.getSelection()[0];",
+                    "",
+                    "                        st_grupodet.load({",
+                    "                            params:{",
+                    "                                'operacion':2,",
+                    "                                'ln_reg_codigo':rec.data.ln_reg_codigo,",
+                    "                                'ln_gru_codigo':11,",
+                    "                                'ls_condicion':'T'",
+                    "                            }",
+                    "                        });",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnretrievefinalClick",
+            "designerId": "3d655be4-8d63-4705-9cc1-7446435accd5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain  #btnmodificaroctavo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnmodificaroctavoClick",
+                "implHandler": [
+                    "    var me =this,",
+                    "        vp=me.getMain(),",
+                    "        grd=vp.down('#grdgmupartidooctavo'),",
+                    "        sm=grd.getSelectionModel();",
+                    "",
+                    "        if(sm.hasSelection()===false){",
+                    "",
+                    "            Ext.MessageBox.alert('Mensaje','Seleccione grupo del cual desea modificar los valores');",
+                    "",
+                    "            return;",
+                    "        }",
+                    "",
+                    "        var win=Ext.create('gmo.gmu.partidoreg.winMtto'),",
+                    "",
+                    "            rec = sm.getSelection()[0];",
+                    "",
+                    "        win.down('#ln_reg_codigo').setValue(rec.data.ln_reg_codigo);",
+                    "",
+                    "        win.down('#ln_gru_codigo').setValue(rec.data.ln_gru_codigo);",
+                    "",
+                    "        win.down('#accion').setValue(2);",
+                    "",
+                    "        win.down('#ln_nro_tab').setValue(1);",
+                    "",
+                    "        win.show();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnmodificaroctavoClick",
+            "designerId": "e1ecdf2e-a8c2-464a-8c2a-3551a07a643a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnmodificarcuarto",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnmodificarcuartoClick",
+                "implHandler": [
+                    "  var me =this,",
+                    "        vp=me.getMain(),",
+                    "        grd=vp.down('#grdgmupartidocuarto'),",
+                    "        sm=grd.getSelectionModel();",
+                    "",
+                    "        if(sm.hasSelection()===false){",
+                    "",
+                    "            Ext.MessageBox.alert('Mensaje','Seleccione grupo del cual desea modificar los valores');",
+                    "",
+                    "            return;",
+                    "        }",
+                    "",
+                    "        var win=Ext.create('gmo.gmu.partidoreg.winMtto'),",
+                    "",
+                    "            rec = sm.getSelection()[0];",
+                    "",
+                    "        win.down('#ln_reg_codigo').setValue(rec.data.ln_reg_codigo);",
+                    "",
+                    "        win.down('#ln_gru_codigo').setValue(rec.data.ln_gru_codigo);",
+                    "",
+                    "        win.down('#accion').setValue(2);",
+                    "",
+                    "        win.down('#ln_nro_tab').setValue(2);",
+                    "",
+                    "        win.show();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnmodificarcuartoClick",
+            "designerId": "fc44b1a7-3156-469e-a671-98affd41f9ee"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnmodificarfinal",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnmodificarfinalClick",
+                "implHandler": [
+                    "    var me =this,",
+                    "        vp=me.getMain(),",
+                    "        grd=vp.down('#grdgmupartidofinal'),",
+                    "        sm=grd.getSelectionModel();",
+                    "",
+                    "        if(sm.hasSelection()===false){",
+                    "",
+                    "            Ext.MessageBox.alert('Mensaje','Seleccione grupo del cual desea modificar los valores');",
+                    "",
+                    "            return;",
+                    "        }",
+                    "",
+                    "        var win=Ext.create('gmo.gmu.partidoreg.winMtto'),",
+                    "",
+                    "            rec = sm.getSelection()[0];",
+                    "",
+                    "        win.down('#ln_reg_codigo').setValue(rec.data.ln_reg_codigo);",
+                    "",
+                    "        win.down('#ln_gru_codigo').setValue(rec.data.ln_gru_codigo);",
+                    "",
+                    "        win.down('#accion').setValue(2);",
+                    "",
+                    "        win.down('#ln_nro_tab').setValue(3);",
+                    "",
+                    "        win.show();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnmodificarfinalClick",
+            "designerId": "673190bf-68ba-4b99-b17c-3c0988f392b8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnnuevoregistro",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnnuevoregistroClick",
+                "implHandler": [
+                    "",
+                    "        var me = this,",
+                    "            vp = me.getMain(),",
+                    "            ln_per_codigo = vp.down('#ln_per_codigo').getValue(),",
+                    "            ls_per_nombre = vp.down('#ls_per_nombre').getValue(),",
+                    "            st_registro = vp.down('#grdgmuregistro').getStore(),",
+                    "",
+                    "            win = Ext.create('mundialito.view.gmo.gmu.registro.winMtto');",
+                    "",
+                    "            win.down('#ln_per_codigo').setValue(ln_per_codigo);",
+                    "",
+                    "            win.down('#ls_per_nombre').setValue(ls_per_nombre);",
+                    "",
+                    "            win.down('#accion').setValue(1);",
+                    "",
+                    "            win.show();",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnnuevoregistroClick",
+            "designerId": "3f6ef961-3cf9-4d1d-996c-711bc2705917"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnanularregistro",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnanularregistroClick",
+                "implHandler": [
+                    "        var me = this,",
+                    "            vp = me.getMain(),",
+                    "            grd = vp.down('#grdgmuregistro'),",
+                    "            sm=grd.getSelectionModel();",
+                    "",
+                    "            if (sm.hasSelection()===false){",
+                    "",
+                    "                Ext.MessageBox.alert('Mensaje','Debe seleccionar registro que desea anular');",
+                    "",
+                    "                return;",
+                    "            }",
+                    "",
+                    "            var rec=sm.getSelection()[0];",
+                    "",
+                    "            var ln_reg_codigo = rec.data.ln_reg_codigo;",
+                    "",
+                    "            var ls_url = '/library/Mundialito/process/lst_gmu_registro.php';",
+                    "",
+                    "            var ls_params={",
+                    "                'operacion':1,",
+                    "                'accion':3,",
+                    "                'ln_reg_codigo':ln_reg_codigo,",
+                    "                'ln_per_codigo':0",
+                    "            };",
+                    "",
+                    "            Ext.MessageBox.confirm('Mensaje','Desea anular registro seleccionado',function(rsp){",
+                    "",
+                    "            if(rsp==='yes'){",
+                    "",
+                    "                 me.getController('gmo.gmu.utiles.ctrfuncion').fn_AjaxRequest(ls_params,ls_url,function(val){",
+                    "",
+                    "                   if(val){",
+                    "",
+                    "                       grd.getStore().remove(rec);",
+                    "",
+                    "                       Ext.Msg.alert('Mensaje','Anulacion de registro realizado correctamente');",
+                    "                   }",
+                    "",
+                    "                 });",
+                    "",
+                    "            }",
+                    "",
+                    "        });",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "name": "string",
+                "implHandler": "code"
+            },
+            "name": "onBtnanularregistroClick",
+            "designerId": "da3b59e9-8e84-4d4c-892e-b95a30ca2486"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnmodificar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnmodificarClick",
+                "implHandler": [
+                    "    var me =this,",
+                    "        vp=me.getMain(),",
+                    "        grd=vp.down('#grdgmugrupodetreg'),",
+                    "        sm=grd.getSelectionModel();",
+                    "",
+                    "        if(sm.hasSelection()===false){",
+                    "",
+                    "            Ext.MessageBox.alert('Mensaje','Seleccione grupo del cual desea modificar los valores');",
+                    "",
+                    "            return;",
+                    "        }",
+                    "",
+                    "        var win=Ext.create('gmo.gmu.partidoreg.winMtto'),",
+                    "",
+                    "            rec = sm.getSelection()[0];",
+                    "",
+                    "        win.down('#ln_reg_codigo').setValue(rec.data.ln_reg_codigo);",
+                    "",
+                    "        win.down('#ln_gru_codigo').setValue(rec.data.ln_gru_codigo);",
+                    "",
+                    "        win.down('#accion').setValue(2);",
+                    "",
+                    "        win.down('#ln_nro_tab').setValue(0);",
+                    "",
+                    "        win.show();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnmodificarClick",
+            "designerId": "da0693d5-e1ab-49d1-8c24-50d43f0e83be"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnretrieveadicionalreg",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnretrieveadicionalregClick",
+                "implHandler": [
+                    "    var me = this,",
+                    "        vp = me.getMain(),",
+                    "        grd = vp.down('#grdgmuregistro'),",
+                    "        sm = grd.getSelectionModel(),",
+                    "        st_grupodet = vp.down('#grdgmuadicionalreg').getStore();",
+                    "",
+                    "        if (sm.hasSelection()===false){",
+                    "                return;",
+                    "        }",
+                    "",
+                    "        var rec = sm.getSelection()[0];",
+                    "",
+                    "        st_grupodet.load({",
+                    "          params:{",
+                    "            'operacion':2,",
+                    "            'ln_reg_codigo':rec.data.ln_reg_codigo,",
+                    "            'ln_gru_codigo':14",
+                    "           }",
+                    "        });",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnretrieveadicionalregClick",
+            "designerId": "b3ca7275-cbd4-4eab-9481-01f71dd95fe0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnmodificaradicionalreg",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnmodificaradicionalregClick",
+                "implHandler": [
+                    "",
+                    "var me =this,",
+                    "    vp=me.getMain(),",
+                    "    grd=vp.down('#grdgmuadicionalreg'),",
+                    "    sm=grd.getSelectionModel();",
+                    "",
+                    "if(sm.hasSelection()===false){",
+                    "",
+                    "    Ext.MessageBox.alert('Mensaje','Seleccione registro que desea modificar');",
+                    "",
+                    "    return;",
+                    "}",
+                    "",
+                    "var win=Ext.create('gmo.gmu.adicionalreg.winMtto'),",
+                    "",
+                    "    rec = sm.getSelection()[0];",
+                    "",
+                    "win.down('#ln_reg_codigo').setValue(rec.data.ln_reg_codigo);",
+                    "",
+                    "win.down('#ln_gru_codigo').setValue(rec.data.ln_gru_codigo);",
+                    "",
+                    "win.down('#accion').setValue(2);",
+                    "",
+                    "win.show();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnmodificaradicionalregClick",
+            "designerId": "538e1924-a14d-42d7-8974-4335fcbbe2e0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnretrieveexcelenciareg",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnretrieveexcelenciaregClick",
+                "implHandler": [
+                    "    var me = this,",
+                    "        vp = me.getMain(),",
+                    "        grd = vp.down('#grdgmuregistro'),",
+                    "        sm = grd.getSelectionModel(),",
+                    "        st_grupodet = vp.down('#grdgmuexcelenciareg').getStore();",
+                    "",
+                    "        if (sm.hasSelection()===false){",
+                    "                return;",
+                    "        }",
+                    "",
+                    "        var rec = sm.getSelection()[0];",
+                    "",
+                    "        st_grupodet.load({",
+                    "          params:{",
+                    "            'operacion':2,",
+                    "            'ln_reg_codigo':rec.data.ln_reg_codigo,",
+                    "            'ln_gru_codigo':15",
+                    "           }",
+                    "        });",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnretrieveexcelenciaregClick",
+            "designerId": "1893bfa2-961a-4186-be3f-b7726237dbef"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnmodificarexcelenciareg",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnmodificarexcelenciaregClick",
+                "implHandler": [
+                    "var me =this,",
+                    "    vp=me.getMain(),",
+                    "    grd=vp.down('#grdgmuexcelenciareg'),",
+                    "    sm=grd.getSelectionModel();",
+                    "",
+                    "if(sm.hasSelection()===false){",
+                    "",
+                    "    Ext.MessageBox.alert('Mensaje','Seleccione registro que desea modificar');",
+                    "",
+                    "    return;",
+                    "}",
+                    "",
+                    "var win=Ext.create('gmo.gmu.excelenciareg.winMtto'),",
+                    "",
+                    "    rec = sm.getSelection()[0];",
+                    "",
+                    "win.down('#ln_reg_codigo').setValue(rec.data.ln_reg_codigo);",
+                    "",
+                    "win.down('#ln_gru_codigo').setValue(rec.data.ln_gru_codigo);",
+                    "",
+                    "win.down('#ln_trn_codigo').setValue(1);",
+                    "",
+                    "win.down('#accion').setValue(2);",
+                    "",
+                    "win.show();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnmodificarexcelenciaregClick",
+            "designerId": "ce1d1035-96dc-422c-bf37-c21e22735108"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnCambioPassword",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnCambioPasswordClick",
+                "implHandler": [
+                    "    var me =this,",
+                    "        vp = me.getMain(),",
+                    "        ln_per_codigo = vp.down('#ln_per_codigo').getValue();",
+                    "",
+                    "    var win = Ext.create('gmo.gmu.security.winchangepwd');",
+                    "",
+                    "        win.down('#ln_per_codigo').setValue(ln_per_codigo);",
+                    "",
+                    "        win.show();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnCambioPasswordClick",
+            "designerId": "3ecbf9b7-7d00-4535-a8b2-8969a973fc45"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain  #btnactualizapersona",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnactualizapersonaClick",
+                "implHandler": [
+                    "        var me= this,",
+                    "",
+                    "            vp = me.getMain(),",
+                    "",
+                    "            ln_per_codigo = vp.down('#ln_per_codigo').getValue();",
+                    "",
+                    "            if (ln_per_codigo===undefined) { return;}",
+                    "",
+                    "        var win = Ext.create('gmo.gmu.persona.winMtto'),",
+                    "            st_persona = Ext.create('gmo.gmu.persona.stpersona');",
+                    "",
+                    "            st_persona.load({",
+                    "                params:{",
+                    "                    'operacion':2,",
+                    "                    'ln_per_codigo':ln_per_codigo",
+                    "                },",
+                    "                callback:function(records,options,success){",
+                    "                    if(success&&records[0]!==undefined){",
+                    "                        win.down('#frmglbpersona').loadRecord(records[0]);",
+                    "                        win.down('#accion').setValue(2);",
+                    "                        win.down('#win_parent').setValue(1);",
+                    "                        win.show();",
+                    "                    }",
+                    "                }",
+                    "",
+                    "            });",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnactualizapersonaClick",
+            "designerId": "373c7348-604f-4af0-96ec-3283ba259a67"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain",
+                "designer|params": [
+                    "container",
+                    "layout",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.container.Viewport",
+                "fn": "onVpngmumainAfterLayout",
+                "implHandler": [
+                    "    var me = this,",
+                    "",
+                    "                vp=me.getMain(),",
+                    "",
+                    "                btn_resumen = vp.down('#btnRetrieveResumen'),",
+                    "",
+                    "                btn_retrieve = vp.down('#btnrecuperar');",
+                    "",
+                    "                me.onBtnrecuperarClick(me,me.btn_retrieve);",
+                    "",
+                    "                me.onBtnRetrieveResumenClick(me,me.btn_resumen);",
+                    ""
+                ],
+                "name": "afterlayout"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onVpngmumainAfterLayout",
+            "designerId": "fced77e7-a538-46dc-ae46-4691e323c2ba"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnCerrarSesion",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnCerrarSesionClick",
+                "implHandler": [
+                    "       var me = this,",
+                    "       ",
+                    "            vp = me.getMain();",
+                    "",
+                    "            Ext.MessageBox.confirm('Mensaje','Desea cerrar sesion',function(rsp){",
+                    "",
+                    "            if(rsp!=='yes'){return;}",
+                    "                ",
+                    "              vp.close();              ",
+                    "                ",
+                    "",
+                    "          });"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnCerrarSesionClick",
+            "designerId": "a6d1a823-6424-41c5-8670-43818d83e3d8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain  #btnRetrieveResultado",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnRetrieveResultadoClick",
+                "implHandler": [
+                    "                var me = this,",
+                    "                vp = me.getMain(),",
+                    "                grd = vp.down('#grdgmuregistro'),",
+                    "                sm = grd.getSelectionModel(),",
+                    "                st_rst = vp.down('#grdgmuresultado').getStore();",
+                    "",
+                    "                if (sm.hasSelection()===false){",
+                    "                        return;",
+                    "                }",
+                    "",
+                    "                var rec = sm.getSelection()[0];",
+                    "",
+                    "                st_rst.load({",
+                    "                  params:{",
+                    "                    'operacion':3,",
+                    "                    'ln_reg_codigo':rec.data.ln_reg_codigo",
+                    "                   }",
+                    "                });",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnRetrieveResultadoClick",
+            "designerId": "dd9f7257-5dd2-4e9e-a4d3-691c33e8c5ee"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain  #btnexportar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnexportarClick",
+                "implHandler": [
+                    "    var me = this,",
+                    "        vp = me.getMain(),",
+                    "        grd = vp.down('#grdgmuregistro'),",
+                    "        sm = grd.getSelectionModel(),",
+                    "        frm = vp.down('#frmgmuexportar');",
+                    "",
+                    "",
+                    "        if (sm.hasSelection()===false){",
+                    "            return;",
+                    "        }",
+                    "",
+                    "        var rec =sm.getSelection()[0];",
+                    "",
+                    "        frm.getForm().submit({",
+                    "            standardSubmit:true,",
+                    "            url:'/library/Mundialito/process/lst_gmu_exportexcel.php',",
+                    "            headers:{",
+                    "",
+                    "            },",
+                    "            method: 'POST',",
+                    "            params:{",
+                    "                'operacion':1,",
+                    "                'ln_reg_codigo':rec.data.ln_reg_codigo",
+                    "            }",
+                    "",
+                    "        });",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnexportarClick",
+            "designerId": "9dac48af-898e-4ede-b680-8b4843f790d9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#vpngmumain #btnRetrieveResumen",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnRetrieveResumenClick",
+                "implHandler": [
+                    "        var me = this,",
+                    "",
+                    "            vp = me.getMain(),",
+                    "",
+                    "            st_resumen = vp.down('#grdgmuresumen').getStore();",
+                    "",
+                    "            st_resumen.load({",
+                    "                params:{",
+                    "                    'operacion':1,",
+                    "                    'ln_trn_codigo':1",
+                    "                }",
+                    "            });",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnRetrieveResumenClick",
+            "designerId": "885a4058-5a25-416f-8d04-461d0bba69c1"
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "name": "AppMundial",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "exportPath": "C:/xampp/htdocs/mundialito",
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": false,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1875-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "4.2.3",
+    "xdsBuild": 371,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "01c1bc0c-7db4-40d4-a168-099d781b9037",
+            "d1544297-e7a0-4e2d-8f63-df09fa0fdc6d",
+            "12136f38-3423-4077-9ab4-02280ebaf643",
+            "bb58e86a-a1f1-41c3-8c8a-1e1e623e20fd",
+            "6a3fced0-6f15-4fd2-9c43-50e71556186a",
+            "2b6eed1d-09fe-451f-9615-15c5ede7dd14",
+            "702da73f-f861-430c-8288-fa5c484cc2e4",
+            "f6a7ad43-2dac-4d06-8192-9cc58217b6f2",
+            "56b1a7f9-8188-41c0-9c84-84bccb7cf212"
+        ],
+        "store": [
+            "3f0d2e0a-9f07-464f-8e72-67c3101aa84f",
+            "002efa3a-a494-4d68-9647-8d19f7528449",
+            "a3736c3a-6e74-4555-8512-041cd3aee5e2",
+            "662e1f55-a51e-479d-9eae-2458fb47f353",
+            "838eaf94-174f-48b7-b03e-58342c2c3328",
+            "3e0a042e-d295-49d9-84d5-aa99c032a70b",
+            "eec1616e-bd90-454a-aaa4-c92c879379b5",
+            "6c572474-6c20-442c-bf1a-c881667bfa4f",
+            "7c28c90e-1f52-407e-b9ff-cad80c0fef54",
+            "d8701b29-78bd-4eb9-b2e7-fedbe0a3ef9f",
+            "f2e7fd2a-96ed-45e5-a5ea-15b10bc847c3",
+            "5a6db9fd-8fb6-46fb-aceb-136dfe7e6a69",
+            "63e9d9c1-1584-47c1-80f4-623954ac1296",
+            "3bd2e987-5a26-40be-8177-2c9ddc23fa13",
+            "7c448561-2637-4c80-8dd1-0e9e7959d394",
+            "0259af23-15cb-4ee0-87df-0b9be6452401"
+        ],
+        "controller": [
+            "f2548467-a3ea-4624-a4db-6b51ad0153d9",
+            "99fe2d60-246c-4762-8f85-40427ee709a7",
+            "ebabf2cf-d87f-4f5b-8d91-3f51c2423800",
+            "64808965-b785-4316-8da0-4a048c70d664",
+            "03701f79-e3cb-4fc7-bb07-a7735279e147",
+            "dbf381ad-b6aa-48d2-b6f3-4cd2b9445beb",
+            "01c8fbaf-c2ae-4209-ab0a-e95042444e72",
+            "9015cd95-58f1-41ed-9fbe-decce7632f77",
+            "3b798f57-de60-4cbd-b4bc-5572c4281133",
+            "41965f8b-da2a-4b5b-850f-16c3397885f9",
+            "71e360b6-eebe-4bed-a9ab-12045b13b940"
+        ],
+        "model": [
+            "b21f51bc-4e22-421c-8646-72c9019f4a67",
+            "d7198be6-7f5d-4d29-a5e0-2b2e4df6505e",
+            "bb5d28b4-9f24-4846-9f06-14436ebe68e1",
+            "8c46cc5e-c189-4d1a-8383-4883f4f3fb98",
+            "cb59f7b4-3481-48ce-8cd2-e966e417f9ea",
+            "ab4faa15-73ae-4227-a22e-73e3abefefa9",
+            "b4206ca6-427b-4977-b9a7-1303d0242467",
+            "79f5157d-f163-4a3e-885b-f0a939d9fb8d",
+            "8469f703-a372-46d9-aba5-cf95c6a34643",
+            "5edf0993-9bc8-4a25-90fc-9fd3a0a03ce6"
+        ],
+        "resource": [
+            "80b17697-9e64-4079-bfd9-5d7c1c46c0a8",
+            "eeaed1aa-d960-4d56-b470-8850766f878f",
+            "b3feebd8-29a0-495d-aec3-94393c7d5a33"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

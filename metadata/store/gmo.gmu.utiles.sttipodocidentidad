@@ -1,0 +1,77 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.utiles.sttipodocidentidad"
+        ],
+        "data": [
+            "[",
+            "    {",
+            "        \"tpo_codigo\": 1,",
+            "        \"tpo_descripcion\": \"DNI\"",
+            "    },",
+            "    {",
+            "        \"tpo_codigo\": 2,",
+            "        \"tpo_descripcion\": \"RUT\"",
+            "    },",
+            "    {",
+            "        \"tpo_codigo\": 3,",
+            "        \"tpo_descripcion\": \"PASAPORTE\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "gmo.gmu.utiles.sttipodocidentidad",
+        "storeId": "gmo.gmu.utiles.sttipodocidentidad"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "data": "array",
+        "designer|userClassName": "string",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "eec1616e-bd90-454a-aaa4-c92c879379b5",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tpo_codigo",
+                "type": "int"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField37",
+            "designerId": "5c3e6fde-8689-453b-8f43-d81313a37e5b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tpo_descripcion",
+                "type": "string"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField38",
+            "designerId": "96bc6b46-687a-4dcb-b285-33670c92044b"
+        }
+    ]
+}

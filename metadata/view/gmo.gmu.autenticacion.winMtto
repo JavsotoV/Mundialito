@@ -1,0 +1,340 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.autenticacion.winMtto"
+        ],
+        "autoShow": true,
+        "closable": false,
+        "designer|initialView": true,
+        "designer|userClassName": "gmo.gmu.autenticacion.winMtto",
+        "height": 181,
+        "itemId": "wingmuautenticacion",
+        "modal": true,
+        "title": "Autenticacion de Participante",
+        "width": 412
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "closable": "boolean",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto",
+        "autoShow": "boolean",
+        "designer|initialView": "boolean",
+        "itemId": "string"
+    },
+    "designerId": "bb58e86a-a1f1-41c3-8c8a-1e1e623e20fd",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "frmgmuautenticacion",
+                "method": "POST",
+                "url": "/library/Mundialito/process/lst_gmu_autenticacion.php"
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "itemId": "string",
+                "layout|region": "string",
+                "container|align": "string",
+                "layout": "string",
+                "method": "string",
+                "url": "string"
+            },
+            "name": "MyForm3",
+            "designerId": "1463c87f-2ad1-4a5f-9ad8-4996a22807f6",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": null,
+                        "title": "Datos de cuenta de Acceso"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "layout|region": "string",
+                        "dock": "string"
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "2d59b7dd-b3fa-4703-80a8-654e294dc9b7",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "DNI | RUC:",
+                                "itemId": "ls_cta_usuario",
+                                "layout|anchor": "100%",
+                                "name": "ls_cta_usuario"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|anchor": "string",
+                                "allowBlank": "boolean",
+                                "itemId": "string",
+                                "name": "string"
+                            },
+                            "name": "MyTextField5",
+                            "designerId": "38b85a50-46d4-4e94-a1ef-bbb9d013b18e"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "blankText": "Ingresar Password",
+                                "fieldLabel": "Password:",
+                                "inputType": "password",
+                                "itemId": "ls_cta_password",
+                                "layout|anchor": "100%",
+                                "name": "ls_cta_password"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|anchor": "string",
+                                "inputType": "string",
+                                "allowBlank": "boolean",
+                                "blankText": "string",
+                                "itemId": "string",
+                                "name": "string"
+                            },
+                            "name": "MyTextField10",
+                            "designerId": "c29affc2-8c51-4d69-9912-690778fcbc0b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": "3 3 3 3",
+                        "value": "Para poder ingresar previamente tiene que registrarse para que se le genere su cuenta de acceso."
+                    },
+                    "configAlternates": {
+                        "layout|anchor": "string",
+                        "value": "string",
+                        "margin": "auto"
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "7ac96c42-9846-4075-85d3-4b4b47f89c0e"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom"
+                    },
+                    "configAlternates": {
+                        "dock": "string",
+                        "layout|region": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyToolbar4",
+                    "designerId": "6b3eedd2-9252-488f-ac3b-59807b3af8d0",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "Menu de opciones:"
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyLabel4",
+                            "designerId": "d5ae0bf4-2c4f-4157-b978-5df08984e81e"
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill2",
+                            "designerId": "cc6d8b64-f345-4ce5-8d87-3ffedf917f56"
+                        },
+                        {
+                            "type": "Ext.toolbar.Separator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MySeparator13",
+                            "designerId": "2108fee5-c895-4d23-b26b-afd469c3b1c6"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "btnSesion",
+                                "itemId": "btnSesion",
+                                "layout|flex": null,
+                                "text": "Aceptar"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyButton11",
+                            "designerId": "970d4cff-ee5f-4401-a7c9-10467c4eefea"
+                        },
+                        {
+                            "type": "Ext.toolbar.Separator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MySeparator14",
+                            "designerId": "bb1a18f6-30af-405c-9daf-6e8700b6c8de"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "btnNew",
+                                "itemId": "btnRegistrar",
+                                "layout|flex": null,
+                                "text": "Registrar"
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "text": "string",
+                                "iconCls": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "43c473fc-28c7-4d71-9dd3-c95bd0cc3b90"
+                        },
+                        {
+                            "type": "Ext.toolbar.Separator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MySeparator15",
+                            "designerId": "1274df18-a1e9-4705-9b61-eb752bfb1fa1"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "btnClose",
+                                "itemId": "btnCerrar",
+                                "layout|flex": null,
+                                "text": "Cerrar"
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "text": "string",
+                                "iconCls": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyButton13",
+                            "designerId": "3c5e7766-6f06-41c4-8c56-b787f1611bf1"
+                        },
+                        {
+                            "type": "Ext.toolbar.Separator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MySeparator16",
+                            "designerId": "397f16d1-f2e2-492a-9bcd-122162b87cc1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

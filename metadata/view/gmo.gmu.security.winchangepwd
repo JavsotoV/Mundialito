@@ -1,0 +1,306 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.security.winchangepwd"
+        ],
+        "designer|userClassName": "gmo.gmu.security.winchangepwd",
+        "height": 152,
+        "itemId": "wingmuchangepwd",
+        "modal": true,
+        "title": "Cambio Password",
+        "width": 297
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "56b1a7f9-8188-41c0-9c84-84bccb7cf212",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "configAlternates": {
+                "dock": "string"
+            },
+            "name": "MyToolbar10",
+            "designerId": "12e0eed7-5e45-4b0f-b895-72d0fb91f94e",
+            "cn": [
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "Menu de opciones:"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyLabel8",
+                    "designerId": "f95ec9d9-f423-45ac-849e-fc880ee3b227"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MyFill7",
+                    "designerId": "09241121-4626-4830-9908-97378a8db35a"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator33",
+                    "designerId": "1f4c77ba-25d1-499b-90c7-8da6a08f7ecd"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "btnSave",
+                        "itemId": "btnGuardar",
+                        "layout|flex": null,
+                        "text": "Guardar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton25",
+                    "designerId": "eb4a3d19-20fe-427b-b513-f9ea70821e1a"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator35",
+                    "designerId": "fe6f47aa-3b4c-4d8d-9ee5-2628164ba2d7"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "btnClose",
+                        "itemId": "btnCerrar",
+                        "layout|flex": null,
+                        "text": "Cerrar"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "text": "string",
+                        "iconCls": "string",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton26",
+                    "designerId": "669fbb2e-5e84-47d4-8704-4ec875825e41"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator34",
+                    "designerId": "ff0437a6-a03b-4d3e-8dfd-c48bb37a7951"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "height": 112,
+                "itemId": "frmgmuchangepwd",
+                "method": "POST",
+                "url": "/library/Mundialito/process/lst_seg_cuenta.php",
+                "width": 285
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "height": "auto",
+                "itemId": "string",
+                "method": "string",
+                "url": "string",
+                "width": "auto"
+            },
+            "name": "MyForm6",
+            "designerId": "4f28e1ad-3487-40ea-a726-e35732d64df2",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Passwor Actual",
+                        "inputType": "password",
+                        "itemId": "ls_cta_password",
+                        "labelWidth": 120,
+                        "name": "ls_cta_password"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "fieldLabel": "string",
+                        "inputType": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "name": "string"
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "830fbf53-3c8c-4ff2-8c78-a8e5a4cb8aa4"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Nuevo Password",
+                        "inputType": "password",
+                        "itemId": "ls_cta_passwordnvo",
+                        "labelWidth": 120,
+                        "name": "ls_cta_passwordnvo"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|region": "string",
+                        "allowBlank": "boolean",
+                        "inputType": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "name": "string"
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "7e14801c-3c9b-4467-af4a-c2c9df57294a"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Confirmar Password",
+                        "inputType": "password",
+                        "itemId": "ls_cta_passwordnvocon",
+                        "labelWidth": 120,
+                        "name": "ls_cta_passwordnvocon"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|region": "string",
+                        "allowBlank": "boolean",
+                        "inputType": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "name": "string"
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "5af1839e-1a37-4859-b915-73529cc0e370"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "itemId": "ln_per_codigo",
+                        "layout|anchor": "100%",
+                        "name": "ln_per_codigo"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField20",
+                    "designerId": "dece934a-bf73-4a96-ae99-a276ef601d0d"
+                }
+            ]
+        }
+    ]
+}

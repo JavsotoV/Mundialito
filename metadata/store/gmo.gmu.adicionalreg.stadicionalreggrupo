@@ -1,0 +1,82 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.adicionalreg.stadicionalreggrupo"
+        ],
+        "designer|userClassName": "gmo.gmu.adicionalreg.stadicionalreggrupo",
+        "groupField": "ls_gru_denominacion",
+        "model": "gmo.gmu.adicionalreg.mdadicionalreg",
+        "storeId": "gmo.gmu.adicionalreg.stadicionalreggrupo"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "gmo.gmu.adicionalreg.stadicionalreg1",
+    "designerId": "d8701b29-78bd-4eb9-b2e7-fedbe0a3ef9f",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getGroupString",
+                "implHandler": [
+                    "return ':' + instance.get ( 'ls_gru_denominacion' );"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getGroupString",
+            "designerId": "93132598-9e82-4b70-ba0c-883824d528eb"
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/library/Mundialito/process/lst_gmu_adicionalreg.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy3",
+            "designerId": "221ecf66-2306-4c8f-bbe2-391210ddd5d3",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader3",
+                    "designerId": "b9ec461f-083f-483d-8f1c-f42da2120dd0"
+                }
+            ]
+        }
+    ]
+}

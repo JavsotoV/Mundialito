@@ -1,0 +1,60 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.resultado.rsresumen"
+        ],
+        "designer|userClassName": "gmo.gmu.resultado.rsresumen",
+        "model": "gmo.gmu.resultado.mdresumen",
+        "storeId": "gmo.gmu.resultado.rsresumen"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "0259af23-15cb-4ee0-87df-0b9be6452401",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/library/Mundialito/process/lst_gmu_resumen.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy6",
+            "designerId": "46fa3432-a17e-48bb-8db2-275a4c0d0097",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader6",
+                    "designerId": "b08f8858-b1c8-4f34-a7c4-da709415e142"
+                }
+            ]
+        }
+    ]
+}

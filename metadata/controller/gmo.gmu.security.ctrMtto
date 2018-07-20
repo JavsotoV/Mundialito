@@ -1,0 +1,150 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.security.ctrMtto"
+        ],
+        "designer|userClassName": "gmo.gmu.security.ctrMtto"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string"
+    },
+    "name": "MyController1",
+    "designerId": "71e360b6-eebe-4bed-a9ab-12045b13b940",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Mtto",
+                "selector": "#wingmuchangepwd"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Mtto",
+            "designerId": "dd715766-622d-42b7-9056-4d270b07fbd4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuchangepwd #btnGuardar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnGuardarClick",
+                "implHandler": [
+                    "        var me = this,",
+                    "            win = me.getMtto(),",
+                    "            pwd_nvo = win.down('#ls_cta_passwordnvo').getValue(),",
+                    "            pwd_con = win.down('#ls_cta_passwordnvocon').getValue(),",
+                    "            frm = win.down('#frmgmuchangepwd');",
+                    "",
+                    "            if (frm.isValid()===false){",
+                    "",
+                    "                Ext.MessageBox.alert('Mensaje','Datos de formulario incompleto');",
+                    "",
+                    "                return;",
+                    "            }",
+                    "",
+                    "         if (pwd_nvo!==pwd_con){",
+                    "",
+                    "                Ext.MessageBox.alert('Mensaje','Nueva clave ingresada no coinciden con la clave de confirmacion');",
+                    "",
+                    "                return;",
+                    "            }",
+                    "",
+                    "",
+                    "        frm.submit({",
+                    "                success: function(form,action){",
+                    "",
+                    "                    var objJson = Ext.JSON.decode(action.response.responseText);",
+                    "",
+                    "                    if(objJson.success){",
+                    "",
+                    "                        var ls_mensaje =objJson.data[0].ls_mensaje;",
+                    "",
+                    "                        Ext.MessageBox.alert('Mensaje',ls_mensaje);",
+                    "",
+                    "                    }",
+                    "",
+                    "                },",
+                    "",
+                    "                 failure: function(form,action){",
+                    "",
+                    "                    var objJson =Ext.JSON.decode(action.response.responseText);",
+                    "",
+                    "                    Ext.MessageBox.alert('Mensaje',objJson.msgError);",
+                    "",
+                    "                 },",
+                    "                params:{'operacion': 1}",
+                    "            });",
+                    "",
+                    ""
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnGuardarClick",
+            "designerId": "2c8206e3-0777-4c83-a4a5-650f98aaec21"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmuchangepwd #btnCerrar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnCerrarClick",
+                "implHandler": [
+                    "        button.up('window').close();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnCerrarClick",
+            "designerId": "3c932779-4f3e-4306-9eb5-5bb4d4ea64e1"
+        }
+    ]
+}

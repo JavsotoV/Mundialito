@@ -1,0 +1,16 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyController"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyController",
+    "designerId": "99fe2d60-246c-4762-8f85-40427ee709a7"
+}

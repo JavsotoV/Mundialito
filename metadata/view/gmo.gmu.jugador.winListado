@@ -1,0 +1,346 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.jugador.winListado"
+        ],
+        "designer|userClassName": "gmo.gmu.jugador.winListado",
+        "height": 341,
+        "itemId": "wingmujugadorlistado",
+        "layout": "border",
+        "modal": true,
+        "title": "Listado de Jugadores",
+        "width": 595
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "f6a7ad43-2dac-4d06-8192-9cc58217b6f2",
+    "cn": [
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "seleccionar",
+                "params": [
+                    "personaCodigo",
+                    "personaDesc"
+                ]
+            },
+            "configAlternates": {
+                "name": "string",
+                "params": "typedarray"
+            },
+            "name": "CustomEvent",
+            "designerId": "848399dc-ab49-4629-bb9a-fe4070e175cc"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "configAlternates": {
+                "dock": "string"
+            },
+            "name": "MyToolbar9",
+            "designerId": "5cf0032e-55bf-40d7-9173-e4735250f1ab",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Nombre o Pais",
+                        "itemId": "txtcriterio",
+                        "layout|flex": null,
+                        "name": "txtcriterio",
+                        "width": 256
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "483a2520-068c-4c24-b969-1ed2655014a1"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator29",
+                    "designerId": "ba537316-5c1f-4342-ad89-1c4dd777ccef"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "btnRetrieve",
+                        "itemId": "btnRecuperar",
+                        "layout|flex": null,
+                        "text": "Recuperar"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton22",
+                    "designerId": "2c9ac895-90ee-4b91-b36a-ddbf2dde4674"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator30",
+                    "designerId": "523336a4-af11-4e9f-992d-2d3300a2f31b"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "btnSelect",
+                        "itemId": "btnSeleccionar",
+                        "layout|flex": null,
+                        "text": "Seleccionar"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "text": "string",
+                        "iconCls": "string",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton23",
+                    "designerId": "f9979757-836c-42cb-8e35-785edd3dd1a9"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator32",
+                    "designerId": "319583dc-3e33-4aec-8793-ecc3d18307bd"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "btnClose",
+                        "itemId": "btnCerrar",
+                        "layout|flex": null,
+                        "text": "Cerrar"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "text": "string",
+                        "iconCls": "string",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton24",
+                    "designerId": "b300ed35-d2fe-48e9-b986-bfc37b3c01df"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator31",
+                    "designerId": "412b5953-d795-4ecb-8138-4d83faa7714c"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "itemId": "ln_trn_codigo",
+                        "layout|flex": null,
+                        "name": "ln_trn_codigo"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField18",
+                    "designerId": "8c732104-fdfc-4cf0-9e41-e676c760b64f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "grdgmujugador",
+                "layout|region": "center",
+                "store": "gmo.gmu.jugador.stjugador"
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout|region": "string",
+                "store": "store"
+            },
+            "name": "MyGridPanel5",
+            "designerId": "d90ed375-4327-4534-aace-5ba6f6e2fcc3",
+            "cn": [
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView5",
+                    "designerId": "e2326212-348c-41e4-954d-9831be1df7e4"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ln_jgd_codigo",
+                        "format": "00",
+                        "hidden": true,
+                        "text": "Ln Jgd Codigo"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "hidden": "boolean",
+                        "text": "string"
+                    },
+                    "name": "MyNumberColumn50",
+                    "designerId": "e65f441f-45fa-4a96-acf9-aa704bb54858"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ls_jgd_nombre",
+                        "text": "Nombres",
+                        "width": 576
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn24",
+                    "designerId": "7462a943-26b3-48cf-a93f-73d3b1ea226e"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ln_trn_codigo",
+                        "format": "00",
+                        "hidden": true,
+                        "text": "Ln Trn Codigo"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "hidden": "boolean",
+                        "text": "string"
+                    },
+                    "name": "MyNumberColumn51",
+                    "designerId": "0155947a-5d52-44c7-9c70-f5a96a0e863e"
+                }
+            ]
+        }
+    ]
+}

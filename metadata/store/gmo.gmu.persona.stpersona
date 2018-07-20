@@ -1,0 +1,60 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.persona.stpersona"
+        ],
+        "designer|userClassName": "gmo.gmu.persona.stpersona",
+        "model": "gmo.gmu.persona.mdpersona",
+        "storeId": "gmo.gmu.persona.stpersona"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "3bd2e987-5a26-40be-8177-2c9ddc23fa13",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/library/Mundialito/process/lst_glb_persona.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy6",
+            "designerId": "74bbedd4-d5da-4156-bc52-1ee0eb80ad26",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader6",
+                    "designerId": "cc1c515e-ba7f-4e84-927e-c6c7037d418c"
+                }
+            ]
+        }
+    ]
+}

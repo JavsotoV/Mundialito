@@ -1,0 +1,269 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "gmo.gmu.jugador.ctrlistado"
+        ],
+        "designer|userClassName": "gmo.gmu.jugador.ctrlistado"
+    },
+    "configAlternates": {
+        "alternateClassName": "typedarray",
+        "designer|userClassName": "string"
+    },
+    "name": "MyController1",
+    "designerId": "3b798f57-de60-4cbd-b4bc-5572c4281133",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmujugadorlistado #txtcriterio",
+                "designer|params": [
+                    "field",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.form.field.Text",
+                "fn": "onTxtcriterioSpecialkey",
+                "implHandler": [
+                    "        var me = this,",
+                    "            win = me.getMtto(),",
+                    "            btn = win.down('#btnRecuperar');",
+                    "",
+                    "            if(e.getKey()==e.ENTER){",
+                    "",
+                    "                    me.onBtnRecuperarClick.call(me,me.btn);",
+                    "            }",
+                    ""
+                ],
+                "name": "specialkey"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onTxtcriterioSpecialkey",
+            "designerId": "f610412d-0cc9-4dc5-9286-e7f617b33d15"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Listado",
+                "selector": "#wingmujugadorlistado"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Listado",
+            "designerId": "ad057402-aa7d-4c59-a8e9-6adfc39b1fba"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Mtto",
+                "selector": "#wingmuexcelenciareg"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "Mtto",
+            "designerId": "e91f4a6c-ae18-45ac-96e0-09ce84773ca4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmujugadorlistado",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.window.Window",
+                "fn": "onWingmujugadorlistadoAfterRender",
+                "implHandler": [
+                    "            var me = this,",
+                    "                win = me.getListado(),",
+                    "                btn_retrieve = win.down('#btnRecuperar');",
+                    "",
+                    "                me.onBtnRecuperarClick(me,me.btn_retrieve);",
+                    "",
+                    ""
+                ],
+                "name": "afterrender"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onWingmujugadorlistadoAfterRender",
+            "designerId": "92114fd5-8516-4a58-89b2-93d16f800145"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmujugadorlistado #btnRecuperar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnRecuperarClick",
+                "implHandler": [
+                    "                var me =this,",
+                    "                win = me.getListado(),",
+                    "                ln_trn_codigo = win.down('#ln_trn_codigo').getValue(),",
+                    "                ls_criterio = win.down('#txtcriterio').getValue(),",
+                    "                st_jugador = win.down('#grdgmujugador').getStore();",
+                    "",
+                    "                if (ls_criterio===undefined) {ls_criterio='';}",
+                    "",
+                    "                st_jugador.load(",
+                    "                {",
+                    "                    params:{",
+                    "                        'operacion':2,",
+                    "                        'ln_trn_codigo':ln_trn_codigo,",
+                    "                        'criterio':ls_criterio",
+                    "                    }",
+                    "                });",
+                    "",
+                    "            "
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onBtnRecuperarClick",
+            "designerId": "ab6361ef-b42f-42a6-95a4-9d5fd2fbd453"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmujugadorlistado #btnSeleccionar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnSeleccionarClick",
+                "implHandler": [
+                    "        var me = this,",
+                    "            win = me.getListado(),",
+                    "            grd = win.down('#grdgmujugador'),",
+                    "            sm = grd.getSelectionModel();",
+                    "",
+                    "            if (sm.hasSelection()===false){",
+                    "",
+                    "                 Ext.MessageBox.show({",
+                    "                        title\t\t:\t'Mensaje',",
+                    "                        msg\t\t\t:\t'Debe seleccionar un registro',",
+                    "                        buttons \t:\tExt.MessageBox.OK,",
+                    "                        icon\t\t:\tExt.MessageBox.WARNING",
+                    "                    });",
+                    "",
+                    "                return;",
+                    "            }",
+                    "",
+                    "            var registro = sm.getSelection()[0];",
+                    "",
+                    "                win.fireEvent('seleccionar',registro.get ( 'ln_jgd_codigo' ),registro.get ( 'ls_jgd_nombre' ));",
+                    "",
+                    "                win.close();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "name": "string",
+                "implHandler": "code"
+            },
+            "name": "onBtnSeleccionarClick",
+            "designerId": "399307ed-b432-4db3-ad70-8216089cbbc8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#wingmujugadorlistado #btnCerrar",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnCerrarClick",
+                "implHandler": [
+                    "        button.up('window').close();"
+                ],
+                "name": "click"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "name": "string",
+                "implHandler": "code"
+            },
+            "name": "onBtnCerrarClick",
+            "designerId": "26f8be73-a03c-405e-beca-81ebcfd564ba"
+        }
+    ]
+}
